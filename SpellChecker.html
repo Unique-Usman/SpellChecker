@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>SpellChecker</title>
+		<style>
+			body {
+				background-color: purple;
+				color: white;
+			}
+			.container {
+				position: fixed;
+				top: 40%;
+				left: 40%;
+			}
+			.in {
+				outline: none;
+				width: 40vh;
+				font-size: 1.7rem;
+				text-align: center;
+				border-radius: 5px;
+			}
+			p {
+				font-size: 1.9rem;
+			}
+			.btn {
+				color: purple;
+				font-size: 1.9rem;
+				text-align: center;
+				display: block;
+				margin-top: 2rem;
+				border-radius: 5px;
+				padding: 0.75rem 1.5rem;
+			}
+		</style>
+		<script defer src="SpellChecker.js"></script>
+	<head>
+	<body>
+		<div class="container">
+			<input type="file" placeholder="dictionary" id="dictionary">
+			<p>Input the word you want to check if it is in the dictionary</p>
+			<input type="text" placeholder="Input the word you want to check" class="in">
+			<button class="btn">Check</button>
+			<p class="res">Result</p>
+		</div>
+	</body>
+<html>

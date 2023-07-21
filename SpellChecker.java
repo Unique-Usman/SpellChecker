@@ -24,9 +24,12 @@ public class SpellChecker {
             while (userFile.hasNext()) {
                 String two = userFile.next();
                 String two1 = two.toLowerCase();
-                if (!strSet.contains(two1)) {
+               /* if (!strSet.contains(two1)) {
                     System.out.println(two1 + ":" + corrections(two1, strSet));
-                }
+                }else{
+                    System.out.println(two1 + ":" + corrections(two1, strSet));
+		}*/
+		System.out.println(two1 + ":" + corrections(two1, strSet));
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -103,14 +106,12 @@ public class SpellChecker {
 
         // Insert a space at any point in the misspelled word (and check that both of the words that are produced are in the dictionary)
         for (int i = 0; i < badWord.length(); i++) {
-            for (char ch = 'a'; ch <= 'z'; ch++) {
-                String s1 = badWord.substring(0, i);
+               	String s1 = badWord.substring(0, i);
                 String s2 = badWord.substring(i);
                 if (dictionary.contains(s1) && dictionary.contains(s2)) {
                     tree.add(s1);
                     tree.add(s2);
                 }
-            }
         }
         return tree;
     }
